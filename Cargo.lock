@@ -627,7 +627,7 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 [[package]]
 name = "libc"
 version = "0.2.152"
-source = "git+https://github.com/wasix-org/libc.git?branch=v0.2.152#4547ffea9bcf92c32ccdf8bc04510d9a1dde3b76"
+source = "git+https://github.com/wasix-org/libc.git?branch=v0.2.152#26f165f162250ad2fc3c6560103eb4e6d7384bce"
 
 [[package]]
 name = "listenfd"
@@ -886,7 +886,7 @@ checksum = "c08c74e62047bb2de4ff487b251e4a92e24f48745648451635cec7d591162d9f"
 [[package]]
 name = "ring"
 version = "0.17.7"
-source = "git+https://github.com/wasix-org/ring.git?branch=0.17.7#d055752924a57c1b956f78198e7d4b731fbc1e49"
+source = "git+https://github.com/wasix-org/ring.git?branch=0.17.7#7ff36ff5501f92c2f9e501fe8da7c443504c1ccb"
 dependencies = [
  "cc",
  "cfg-if",
@@ -907,7 +907,7 @@ checksum = "d626bb9dae77e28219937af045c257c28bfd3f69333c512553507f5f9798cb76"
 [[package]]
 name = "rustls"
 version = "0.22.2"
-source = "git+https://github.com/wasix-org/rustls.git?branch=v0.22.2#6187f8c9da305adba0bb2e4033f04f6a4adf2810"
+source = "git+https://github.com/wasix-org/rustls.git?branch=v0.22.2#b18079522ddff9e538a5110d7211ed9b479b0cd5"
 dependencies = [
  "log",
  "ring",
