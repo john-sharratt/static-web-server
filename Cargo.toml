@@ -40,11 +40,11 @@ bytes = "1.1"
 form_urlencoded = "1.0"
 futures-util = { version = "0.3", default-features = false, features = ["sink"] }
 globset = { version = "0.4", features = ["serde1"] }
-headers = { package = "headers-accept-encoding", git = "https://github.com/static-web-server/headers-accept-encoding.git", branch = "headers_encoding" }
+headers = { package = "headers-accept-encoding", version = "=1.0" }
 http = "0.2"
 http-serde = "1.1"
 humansize = "1.1"
-hyper = { version = "0.14", features = ["stream", "http1", "http2", "tcp", "server"] }
+hyper = { git = "https://github.com/wasix-org/hyper.git", branch = "v0.14.28", features = ["stream", "http1", "http2", "tcp", "server"] }
 listenfd = "0.5"
 mime_guess = "2.0"
 num_cpus = { version = "1.14" }
@@ -56,10 +56,9 @@ serde_ignored = "0.1"
 structopt = { version = "0.3", default-features = false }
 serde_repr = "0.1"
 chrono = { version = "0.4", default-features = false, features = ["std", "clock"] }
-#tokio = { path = "../tokio/tokio", default-features = false, features = ["rt-multi-thread", "macros", "fs", "io-util", "signal"]  }
-tokio = { git = "https://github.com/wasix-org/tokio.git", branch = "epoll", default-features = false, features = ["rt-multi-thread", "macros", "fs", "io-util", "signal"] }
-tokio-rustls = { version = "=0.24.1", optional = true }
-tokio-util = { version = "0.7", default-features = false, features = ["io"] }
+tokio = { git = "https://github.com/wasix-org/tokio.git", branch = "wasix-1.35.1", default-features = false, features = ["rt-multi-thread", "macros", "fs", "io-util", "signal"] }
+tokio-rustls = { git = "https://github.com/wasix-org/tokio-rustls.git", branch = "0.25.0", optional = true }
+tokio-util = { git = "https://github.com/wasix-org/tokio.git", branch = "wasix-1.35.1", default-features = false, features = ["io"] }
 toml = "0.5"
 tracing = { version = "0.1", default-features = false, features = ["std"] }
 tracing-subscriber = { version = "0.3", default-features = false, features = ["smallvec", "parking_lot", "fmt", "ansi", "tracing-log"] }
@@ -80,11 +79,12 @@ bytes = "1.1"
 serde_json = "1.0"
 
 [patch.crates-io]
-socket2 = { git = "https://github.com/wasix-org/socket2.git", branch = "v0.4.9" }
-libc = { git = "https://github.com/wasix-org/libc.git", branch = "v0.2.147" }
-tokio = { git = "https://github.com/wasix-org/tokio.git", branch = "epoll" }
-rustls = { git = "https://github.com/wasix-org/rustls.git", branch = "v0.21.5" }
-hyper = { git = "https://github.com/wasix-org/hyper.git", branch = "v0.14.27" }
+socket2 = { git = "https://github.com/wasix-org/socket2.git", branch = "v0.5.5" }
+libc = { git = "https://github.com/wasix-org/libc.git", branch = "v0.2.152" }
+mio = { git = "https://github.com/wasix-org/mio.git", branch = "v0.8.9" }
+tokio = { git = "https://github.com/wasix-org/tokio.git", branch = "wasix-1.35.1" }
+rustls = { git = "https://github.com/wasix-org/rustls.git", branch = "v0.22.2" }
+hyper = { git = "https://github.com/wasix-org/hyper.git", branch = "v0.14.28" }
 
 [profile.release]
 codegen-units = 1

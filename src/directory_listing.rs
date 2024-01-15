@@ -459,6 +459,7 @@ fn parse_last_modified(modified: SystemTime) -> Result<DateTime<Local>> {
     let utc_dt =
         NaiveDateTime::from_timestamp_opt(since_epoch.as_secs() as i64, since_epoch.subsec_nanos());
 
+    #[allow(deprecated)]
     match utc_dt {
         Some(utc_dt) => Ok(DateTime::<Utc>::from_utc(utc_dt, Utc).with_timezone(&Local)),
         None => Err(anyhow!(
