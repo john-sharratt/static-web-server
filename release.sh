@@ -9,6 +9,10 @@ if [[ -d /prog/packages/static-web-server ]]; then
   cp -f target/wasm32-wasmer-wasi/release/static-web-server.wasm \
     /prog/packages/static-web-server/web-server.wasm
 fi
+if [[ -d /prog/packages/dproxy ]]; then
+  cp -f target/wasm32-wasmer-wasi/release/static-web-server.wasm \
+    /prog/packages/dproxy/web-server.wasm
+fi
 if [[ -d /prog/quantochat ]]; then
   cp -f target/wasm32-wasmer-wasi/release/static-web-server.wasm \
     /prog/quantochat/wapm/quanto-chat-web/web-server.wasm
